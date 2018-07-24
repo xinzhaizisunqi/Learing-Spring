@@ -2,7 +2,7 @@ server:
   port: 8031
 spring:
   application:
-    name: microservice-hystrix-turbine
+    name: microservice-hystrix-turbine3
 eureka:
   client:
     serviceUrl:
@@ -11,9 +11,9 @@ eureka:
     prefer-ip-address: true
 turbine:
   aggregator:
-    clusterConfig: MICROSERVICE-CONSUMER-MOVIE-RIBBON-WITH-HYSTRIX3
+    clusterConfig: default
   appConfig: microservice-consumer-movie-ribbon-with-hystrix3
-  
+  clusterNameExpression: "'default'"
 logging: 
   level:
     root: INFO
