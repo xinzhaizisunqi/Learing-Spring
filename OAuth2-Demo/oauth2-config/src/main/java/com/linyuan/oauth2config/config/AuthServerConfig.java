@@ -18,6 +18,8 @@ import org.springframework.security.oauth2.provider.token.TokenEnhancer;
 import org.springframework.security.oauth2.provider.token.TokenEnhancerChain;
 import org.springframework.security.oauth2.provider.token.TokenStore;
 
+import com.linyuan.oauth2config.config.service.DBClientDetailsService;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Objects;
@@ -48,7 +50,7 @@ public abstract class AuthServerConfig extends AuthorizationServerConfigurerAdap
     private UserDetailsService userDetailsService;
 
     @Autowired(required = false)
-    private JdbcClientDetailsService jdbcClientDetailsService;
+    private ClientDetailsService jdbcClientDetailsService;
 
     //令牌失效时间
     public int accessTokenValiditySeconds;
@@ -69,11 +71,7 @@ public abstract class AuthServerConfig extends AuthorizationServerConfigurerAdap
         this.isReuseRefreshToken = isReuseRefreshToken;
         this.isSupportRefreshToken = isSupportRefreshToken;
     }
-    
-    @Bean
-    public ClientDetailsService clientDetailsService(){
-        return new JdbcClientDetailsService(dataSource);
-    }
+
 
 
     /**
@@ -95,7 +93,7 @@ public abstract class AuthServerConfig extends AuthorizationServerConfigurerAdap
         defaultTokenServices.setRefreshTokenValiditySeconds(refreshTokenValiditySeconds);
         defaultTokenServices.setTokenEnhancer(tokenEnhancerChain);
         //若通过 JDBC 存储令牌
-         defaultTokenServices.setClientDetailsService(clientDetailsService());
+         defaultTokenServices.setClientDetailsService(jdbcClientDetailsService);
        
 
         endpoints
