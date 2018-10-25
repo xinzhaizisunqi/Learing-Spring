@@ -29,7 +29,7 @@ public class RemoteTokenService {
     public AuthorizationServerProperties authorizationServerProperties(){
         return new AuthorizationServerProperties();
     }
-
+    //调用check_token api 校验token的正确性
     @Bean
     public ResourceServerTokenServices tokenServices() {
     	RemoteTokenServices remoteTokenServices = new RemoteTokenServices();

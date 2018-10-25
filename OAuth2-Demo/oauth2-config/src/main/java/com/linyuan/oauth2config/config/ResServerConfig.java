@@ -11,6 +11,7 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 import org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfigurerAdapter;
 import org.springframework.security.oauth2.config.annotation.web.configurers.ResourceServerSecurityConfigurer;
 import org.springframework.security.oauth2.provider.token.RemoteTokenServices;
+import org.springframework.security.oauth2.provider.token.ResourceServerTokenServices;
 import org.springframework.security.web.util.matcher.RequestHeaderRequestMatcher;
 import org.springframework.security.web.util.matcher.RequestMatcher;
 import org.springframework.util.StringUtils;
@@ -25,9 +26,10 @@ import java.util.Objects;
 @EnableResourceServer
 @EnableGlobalMethodSecurity(prePostEnabled = true, securedEnabled = true)
 public abstract class ResServerConfig extends ResourceServerConfigurerAdapter {
-
+	//这地方不需要注入和设置到ResourceServerSecurityConfigurer 只需要RemoteTokenService 里面
+	//创建这个bean ResourceServerTokenServices  到容器中就即可
     @Autowired(required = false)
-    private RemoteTokenServices remoteTokenServices;
+    private ResourceServerTokenServices remoteTokenServices;
 
     @Autowired
     private OAuth2ClientProperties oAuth2ClientProperties;
@@ -60,9 +62,9 @@ public abstract class ResServerConfig extends ResourceServerConfigurerAdapter {
         super.configure(resources);
 
         resources.resourceId(oAuth2ClientProperties.getClientId());
-        
-        if (Objects.nonNull(remoteTokenServices)) {
+    
+      /*  if (Objects.nonNull(remoteTokenServices)) {
             resources.tokenServices(remoteTokenServices);
-        }
+        }*/
     }
 }
