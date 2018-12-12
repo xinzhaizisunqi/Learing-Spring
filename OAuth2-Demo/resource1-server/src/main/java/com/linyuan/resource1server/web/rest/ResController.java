@@ -23,6 +23,15 @@ import javax.servlet.http.HttpServletRequest;
 public class ResController {
 	@Autowired
     private RestTemplate restTemplate;
+	
+
+	 @Autowired
+	 private FeginClient feginClient;
+	 
+	   @GetMapping("/res2test")
+	    public ResponseEntity<String> res2(){
+	        return feginClient.res2();
+	    }
 
     @GetMapping("/res")
     public ResponseEntity<String> res(){
@@ -33,7 +42,7 @@ public class ResController {
      * 访问资源服务器2-资源接口
      * @param httpReq
      * @return
-     */
+     *//*
     @GetMapping("/res2/res")
     public ResponseEntity<String> remoteRes(HttpServletRequest httpReq){
         //HttpEntity
@@ -41,7 +50,8 @@ public class ResController {
         httpHeaders.set("Authorization",httpReq.getHeader("Authorization"));
         HttpEntity httpEntity = new HttpEntity(httpHeaders);
         //请求资源服务器2的资源
-        return restTemplate.exchange("http://localhost:9006/res",HttpMethod.GET,httpEntity,String.class);
-    }
+       // return restTemplate.exchange("http://localhost:9006/res",HttpMethod.GET,httpEntity,String.class);
+        return ResponseEntity.ok("ADMIN 资源2");
+    }*/
 
 }

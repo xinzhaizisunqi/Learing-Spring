@@ -25,4 +25,9 @@ public class MovieController {
 	  SqlMapClientDaoSupport a = null;
     return this.restTemplate.getForObject(this.userServicePath + id, User.class);
   }
+  
+  @GetMapping("/test/{id}")
+  public String findByName() {
+	 return "test";
+  }
 }

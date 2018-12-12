@@ -18,8 +18,9 @@ public class WebSecurityConfig extends ResServerConfig {
         http
                 .authorizeRequests()
                 .antMatchers("/login").permitAll()
-                .antMatchers("/res","/res2/res")
-                .access("#oauth2.hasScope('app') and hasRole('USER')");
+                .antMatchers("/res").access("#oauth2.hasScope('app') and hasRole('USER')");
+                //.antMatchers("/res2test").access("#oauth2.hasScope('app') and hasRole('USER')");
+        
     }
 
 }

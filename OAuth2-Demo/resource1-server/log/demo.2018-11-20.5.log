@@ -1,0 +1,9 @@
+2018-11-20 17:11:16,231 INFO (StartupInfoLogger.java:57)- Started Resource1ServerApplication in 3.645 seconds (JVM running for 3060.407)
+2018-11-20 17:11:47,533 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-11-20 17:11:51,096 INFO (StartupInfoLogger.java:57)- Started Resource1ServerApplication in 4.365 seconds (JVM running for 3095.272)
+2018-11-20 17:22:30,035 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-11-20 17:23:00,897 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-11-20 17:23:03,782 INFO (StartupInfoLogger.java:57)- Started Resource1ServerApplication in 3.506 seconds (JVM running for 3767.958)
+2018-11-20 17:24:39,126 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-11-20 17:24:42,059 INFO (StartupInfoLogger.java:57)- Started Resource1ServerApplication in 3.64 seconds (JVM running for 3866.236)
+2018-11-20 17:24:50,435 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default

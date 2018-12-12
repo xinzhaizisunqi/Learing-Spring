@@ -1,11 +1,14 @@
 package com.linyuan.resource2server;
 
+import com.linyuan.oauth2config.config.annotation.EnableRemoteTokenService;
 import com.linyuan.oauth2config.config.annotation.EnableResJWTTokenStore;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 @SpringBootApplication
-@EnableResJWTTokenStore //OAuth2 使用 JWT 解析令牌
+@EnableRemoteTokenService
+@EnableEurekaClient
 public class Resource2ServerApplication {
 
 	public static void main(String[] args) {

@@ -22,6 +22,9 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+import java.io.FileWriter;
+import java.io.IOException;
+
 /**
  * @author: 林塬
  * @date: 2018/1/19
@@ -58,6 +61,21 @@ public class ResControllerTest {
         ).andExpect(status().isOk())
          .andReturn().getResponse().getContentAsByteArray();
         oAuth2AccessToken = objectMapper.readValue(body,OAuth2AccessToken.class);
+        System.out.println("------------------------------token----------------------------------" +oAuth2AccessToken);
+        
+        String fileName="D:\\kuka.txt";
+        String txt = oAuth2AccessToken.getValue();
+                     try
+                       {
+                            //使用这个构造函数时，如果存在kuka.txt文件，
+                            //则先把这个文件给删除掉，然后创建新的kuka.txt
+                             FileWriter writer=new FileWriter(fileName);
+                              writer.write(txt);
+                              writer.close();
+                       } catch (IOException e)
+                       {
+                                 e.printStackTrace();
+                       }
     }
 
     /**
@@ -66,11 +84,13 @@ public class ResControllerTest {
      */
     @Test
     public void testGetLocalRes() throws Exception{
-    	System.out.print(oAuth2AccessToken.getValue());
+  
         int status = this.mockMvc.perform(
                 get("/res")
-                        .header("Authorization",OAuth2AccessToken.BEARER_TYPE+" "+oAuth2AccessToken.getValue())
+                        //.header("Authorization",OAuth2AccessToken.BEARER_TYPE+" "+oAuth2AccessToken.getValue())
+                .header("Authorization",oAuth2AccessToken.getValue())
                         .accept(MediaType.APPLICATION_JSON)
+
         ).andDo(print()).andReturn().getResponse().getStatus();
         printStatus(status);
         Assert.assertEquals(status,HttpStatus.SC_OK);
@@ -80,11 +100,11 @@ public class ResControllerTest {
      * 测试访问资源服务器2受保护资源
      * @throws Exception
      */
-   /* @Test
+/*    @Test
     public void testGetRes2lRes() throws Exception{
         int status = this.mockMvc.perform(
                 get("/res2/res")
-                        .header("Authorization",OAuth2AccessToken.BEARER_TYPE+" "+oAuth2AccessToken.getValue())
+                        .header("Authorization",OAuth2AccessToken.BEARER_TYPE+" "+"7a98cc93-922e-431f-9474-36ae45b1461c")
                         .accept(MediaType.APPLICATION_JSON)
         ).andDo(print()).andReturn().getResponse().getStatus();
         printStatus(status);

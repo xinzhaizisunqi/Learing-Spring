@@ -1,0 +1,9 @@
+2018-10-24 16:57:13,443 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-10-24 16:57:20,380 INFO (StartupInfoLogger.java:57)- Started Resource1ServerApplication in 8.311 seconds (JVM running for 8.768)
+2018-10-24 16:57:38,446 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-10-24 16:57:45,292 INFO (StartupInfoLogger.java:57)- Started ResControllerTest in 8.206 seconds (JVM running for 9.06)
+2018-10-24 16:59:36,942 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-10-24 16:59:42,492 INFO (StartupInfoLogger.java:57)- Started ResControllerTest in 7.487 seconds (JVM running for 8.192)
+2018-10-24 17:03:08,187 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-10-24 17:03:15,529 INFO (StartupInfoLogger.java:57)- Started Resource1ServerApplication in 9.015 seconds (JVM running for 363.917)
+2018-10-24 17:03:19,032 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default

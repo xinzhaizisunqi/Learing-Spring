@@ -1,0 +1,19 @@
+2018-11-15 11:45:56,859 INFO (StartupInfoLogger.java:57)- Started Resource1ServerApplication in 3.987 seconds (JVM running for 218.669)
+2018-11-15 11:46:10,051 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-11-15 11:46:12,861 INFO (StartupInfoLogger.java:57)- Started Resource1ServerApplication in 3.522 seconds (JVM running for 234.67)
+2018-11-15 11:46:21,005 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-11-15 11:46:26,864 INFO (StartupInfoLogger.java:57)- Started ResControllerTest in 7.266 seconds (JVM running for 7.998)
+2018-11-15 11:47:57,932 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-11-15 11:48:04,255 INFO (StartupInfoLogger.java:57)- Started ResControllerTest in 8.024 seconds (JVM running for 8.733)
+2018-11-15 11:49:18,583 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-11-15 11:49:24,163 INFO (StartupInfoLogger.java:57)- Started ResControllerTest in 7.026 seconds (JVM running for 7.692)
+2018-11-15 11:49:47,256 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-11-15 11:49:53,055 INFO (StartupInfoLogger.java:57)- Started ResControllerTest in 7.195 seconds (JVM running for 7.87)
+2018-11-15 11:52:12,295 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-11-15 11:52:17,941 INFO (StartupInfoLogger.java:57)- Started ResControllerTest in 7.413 seconds (JVM running for 8.077)
+2018-11-15 11:53:08,783 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-11-15 11:53:14,095 INFO (StartupInfoLogger.java:57)- Started ResControllerTest in 6.675 seconds (JVM running for 7.343)
+2018-11-15 11:54:42,839 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-11-15 11:54:48,394 INFO (StartupInfoLogger.java:57)- Started ResControllerTest in 7.038 seconds (JVM running for 7.789)
+2018-11-15 11:55:02,293 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-11-15 11:55:07,739 INFO (StartupInfoLogger.java:57)- Started ResControllerTest in 6.831 seconds (JVM running for 7.53)

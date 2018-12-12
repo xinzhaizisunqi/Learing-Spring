@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: authentication-server
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: sunqi
+Implementation-Vendor-Id: com.linyuan
+Build-Jdk: 1.8.0_131
+Implementation-URL: http://projects.spring.io/spring-boot/oauth2-demo/
+ authentication-server/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
